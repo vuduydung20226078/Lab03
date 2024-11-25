@@ -1,0 +1,11 @@
+//2.1:
+* Đối với mảng (DigitalVideoDisc[])
+- cần chuẩn bị sẵn mảng khi gọi phương thức
+	ví dụ: 
+	DigitalVideoDisc[] dvdArray = {dvd1, dvd2, dvd3};
+	cart.addDigitalVideoDisc(dvdArray);
+* Đối với truyền đối số tùy ý:
+- Linh hoạt, trực tiếp truyền các tham số
+ Ví dụ:
+ cart.addDigitalVideoDisc(dvd1, dvd2, dvd3);
+=> điều em thích ở trường hợp này: tiện lợi và dễ đọc hơn
