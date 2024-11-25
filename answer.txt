@@ -1,11 +1,6 @@
-//2.1:
-* Đối với mảng (DigitalVideoDisc[])
-- cần chuẩn bị sẵn mảng khi gọi phương thức
-	ví dụ: 
-	DigitalVideoDisc[] dvdArray = {dvd1, dvd2, dvd3};
-	cart.addDigitalVideoDisc(dvdArray);
-* Đối với truyền đối số tùy ý:
-- Linh hoạt, trực tiếp truyền các tham số
- Ví dụ:
- cart.addDigitalVideoDisc(dvd1, dvd2, dvd3);
-=> điều em thích ở trường hợp này: tiện lợi và dễ đọc hơn
+
+//3
+- Do java luôn truyền tham số bằng giá trị (pass by value). Khi gọi swap(jungleDVD, cinderellaDVD), các giá trị tham chiếu của hai đối tượng được sao chép và truyền vào phương thức. Bất kỳ thay đổi nào đối với các tham chiếu cục bộ (o1, o2) trong phương thức sẽ không ảnh hưởng đến các tham chiếu ban đầu (jungleDVD, cinderellaDVD)
+- Tiêu đề của jungleDVD thay đổi sau khi gọi changTitle(jungleDVD, cinderellaDVD.getitle()) vì:
++ Trong Java, các thay đổi trên nội dung của đối tượng được tham chiếu (ví dụ: thay đổi thuộc tính title) sẽ ảnh hưởng đến đối tượng gốc.
++ Trong phương thức changeTitle, phương thức dvd.setTitle(title) thay đổi trực tiếp thuộc tính title của đối tượng jungleDVD

@@ -55,6 +55,10 @@ public class DigitalVideoDisc {
 		this.category = category;
 		this.cost = cost;
 	}
+	public DigitalVideoDisc(String title) {
+		this.title = title;
+		
+	}
 	public void displayInfo() {
         System.out.println("Title: " + title);
         System.out.println("Category: " + category);
