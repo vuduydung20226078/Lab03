@@ -1,4 +1,5 @@
 
+
 public class Cart {
 	public static final int MAX_NUMBERS_ORDERED = 20;
 	private DigitalVideoDisc itemsOrdered[] = new DigitalVideoDisc[MAX_NUMBERS_ORDERED];
@@ -50,5 +51,26 @@ public class Cart {
 		}
 		System.out.println("Total cost: $" + totalCost());
 	}
+	//lab03: overloading
+	public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+	    for (DigitalVideoDisc dvd : dvdList) {
+	        this.addDigitalVideoDisc(dvd); 
+	    }
+	}
+// TRUYEN DOI SO TUY Y (TUONG TU VOI TRUYEN MANG NHUNG TIEN HON)
+//	public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
+//	    for (DigitalVideoDisc dvd : dvds) {
+//	        this.addDigitalVideoDisc(dvd); 
+//	    }
+//	}
+	public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+	    this.addDigitalVideoDisc(dvd1); // Gọi phương thức cơ bản để thêm đĩa thứ nhất
+	    this.addDigitalVideoDisc(dvd2); // Gọi phương thức cơ bản để thêm đĩa thứ hai
+	}
+
+
 	
 }
+
+
+ 
