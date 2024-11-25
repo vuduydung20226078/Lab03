@@ -67,6 +67,36 @@ public class Cart {
 	    this.addDigitalVideoDisc(dvd1); // Gọi phương thức cơ bản để thêm đĩa thứ nhất
 	    this.addDigitalVideoDisc(dvd2); // Gọi phương thức cơ bản để thêm đĩa thứ hai
 	}
+	public void print() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        for (int i = 0; i < qtyOrdered; i++) {
+            DigitalVideoDisc disc = itemsOrdered[i];
+            System.out.println((i + 1) + ". " + disc); // Sử dụng phương thức `toString()` của DVD
+        }
+        System.out.println("Total cost: $" + totalCost());
+        System.out.println("***************************************************");
+    }
+    public DigitalVideoDisc searchById(int id) {
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i].getId() == id) { // So sánh ID
+                return itemsOrdered[i];
+            }
+        }
+        System.out.println("No match found for ID: " + id);
+        return null;
+    }
+    public DigitalVideoDisc searchByTitle(String title) {
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i].isMatch(title)) { // Gọi phương thức isMatch
+                return itemsOrdered[i];
+            }
+        }
+        System.out.println("No match found for title: " + title);
+        return null;
+    }
+
+
 
 
 	

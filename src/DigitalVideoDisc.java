@@ -86,7 +86,18 @@ public class DigitalVideoDisc {
         System.out.println("Length: " + length + " minutes");
         System.out.println("Cost: $" + cost);
 	}
+	@Override
+	public String toString() {
+	    return "DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + " $";
+	}
+	public boolean isMatch(String title) {
+	    return this.title.equalsIgnoreCase(title); 
+	}
+
+	
 }
+
+
 
 
 
